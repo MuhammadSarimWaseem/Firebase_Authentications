@@ -1,3 +1,7 @@
+# Project Description
+
+A login and signup page integrated with Firebase for seamless user authentication, ensuring secure access to your application's features.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
