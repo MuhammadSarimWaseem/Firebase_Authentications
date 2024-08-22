@@ -39,7 +39,21 @@ const SignUpPage = () => {
         })
         .catch((error) => {
           setSubmitButtonDisabled(false);
-          setMessage(error.message);
+          setMessage(toast.error(error.message, {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            progress: undefined,
+            theme: "dark",
+            style: {
+              width: "80%",
+              maxWidth: "300px",
+              margin: "0 auto",
+              fontSize: "14px"
+            },
+          }));
         });
 
       setInput({
@@ -80,7 +94,6 @@ const SignUpPage = () => {
             <Link to="/Login">Login</Link>
           </span>
         </p>
-        {message && <div className="message">{message}</div>}
       </form>
     </Fragment>
   );
