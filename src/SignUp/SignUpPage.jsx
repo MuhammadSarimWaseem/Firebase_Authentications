@@ -2,6 +2,7 @@ import React, { Fragment, useState } from 'react';
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from "../Firebase";
 import { Link, useNavigate } from "react-router-dom";
+import { toast } from 'react-toastify';
 
 const SignUpPage = () => {
   const navigate = useNavigate();
@@ -47,7 +48,21 @@ const SignUpPage = () => {
         password: ""
       });
     } else {
-      setMessage("Please fill all the fields");
+      toast("Please fill all the fields!", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        progress: undefined,
+        theme: "dark",
+        style: {
+          width: "70%",
+          maxWidth: "300px",
+          margin: "0 auto",
+          fontSize: "14px"
+        },
+      });
     }
   };
 

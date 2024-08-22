@@ -4,6 +4,7 @@ import HomePage from './Home/HomePage'
 import LoginPage from './Login/LoginPage';
 import SignUpPage from './SignUp/SignUpPage';
 import './App.css';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path='/SignUp/SignUpPage' element={<SignUpPage />} />
         </Routes>
       </BrowserRouter>
+      <ToastContainer />
     </Fragment>
   );
 }
