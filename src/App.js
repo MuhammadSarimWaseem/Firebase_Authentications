@@ -5,6 +5,7 @@ import LoginPage from './Login/LoginPage';
 import SignUpPage from './SignUp/SignUpPage';
 import './App.css';
 import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
