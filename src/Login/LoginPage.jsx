@@ -33,6 +33,21 @@ function LoginPage() {
                 .then(async (res) => {
                     setSubmitButtonDisabled(false);
                     navigate("/");
+                    setMessage(toast.success("Login Successful!", {
+                        position: "top-right",
+                        autoClose: 3000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        progress: undefined,
+                        theme: "dark",
+                        style: {
+                            width: "80%",
+                            maxWidth: "300px",
+                            margin: "0 auto",
+                            fontSize: "14px"
+                        },
+                    }));
                 })
                 .catch((error) => {
                     setSubmitButtonDisabled(false);
