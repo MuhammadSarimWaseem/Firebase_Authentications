@@ -48,7 +48,7 @@ const SignUpPage = () => {
         password: ""
       });
     } else {
-      toast("Please fill all the fields!", {
+      toast.error("Please fill all the fields!", {
         position: "top-right",
         autoClose: 3000,
         hideProgressBar: false,
